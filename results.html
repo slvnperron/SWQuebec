@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ActivityFinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/site.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+	
+	<style>
+		ul.hList { width: 45em; list-style: none;margin: 0; padding:0}
+		ul.hList li { float:left; width: 15em; }
+		ul.hList p { font-size: 80%; margin: 0 0 5px;}
+		
+		</style>
+  </head>
+
+  <body>
+
+
+
+   <div class="navbar-wrapper">
+		<div class="container">
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html">ActivityFinder</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Accueil</a></li>
+							<li><a href="list.html">Trouver des activités</a></li>
+							<li><a href="#">Activités de la semaine</a></li> 
+						</ul>
+						<form class="form-search pull-right" style="margin:0px;">
+							<div class="input-append" style="padding-top: 10px;">
+								<input type="text" class="span2 search-query" placeholder="Trouver une activité">
+								<button type="submit" class="btn"><i class="icon-search"></i></button>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+	
+
+    <div class="container marketing">
+		<div class="row">
+			<div class="span12">
+				<table style="background:#eeeeee; border: 1px solid #dddddd; width:100%">
+					<tr>
+						<td valign="top" style="width: 300px">
+							<h4>Quel type d'activité vous intéresse?</h3>
+							<ul class="hList">
+								<li>
+									<input type="checkbox"> Aquatique<br>
+									<p>(Ex: plage, piscine, jeux d'eau)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Aventure
+									<p>(Ex: paintball, go-kart)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Sport
+									<p>(Ex: terrains, arena)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Apprentissage
+									<p>(Ex: bibliothèque, musés)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Détente
+									<p>(Ex: spa, massages)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Divertissement nocturne
+									<p>(Ex: bars, clubs, billards)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Plein-air
+									<p>(Ex: camping, parcs)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Entrainement
+									<p>(Ex: gym, boxe)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Familial
+									<p>(Ex: centre d'amusement, picnic)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Nourriture
+									<p>(Ex: restaurants)</p>
+								</li>
+								<li>
+									<input type="checkbox"> Sensations fortes
+									<p>(Ex: parachute, bungee, deltaplane)</p>
+								</li>
+							</ul>
+						</td>
+						<td valign="top">
+							<table>
+								<tr>
+									<td>Vous êtes...</td><td><a href="#"><select><option>Seul<option>Groupe</select></td>
+								</tr>
+								<tr>
+									<td>Âge des participants</td><td><select><option>Peu importe<option>Jeunes enfants (0-8ans)<option>Enfants (8-13 ans)<option>Adolescents (14-17ans)<option>Adultes (18ans+)</select></td>
+								</tr>
+								<tr>
+									<td>Tarif</td><td><select><option>Peu importe<option>Gratuit<option>Entre 1$ et 10$<option>Entre 11$ et 25$<option>Entre 26$ et 50$<option>Plus de 51$</select></td>
+								</tr>
+								<tr>
+									<td>Durée de l'activité</td><td><select><option>Peu importe<option>Courte (0-30min)<option>Moyenne (30min-1h30)<option>Longue (1h30+)<option>Toute la journée</select></td>
+								</tr>
+								<tr>
+									<td>Dans un rayon de </td>
+									<td><table><tr><td><select><option>5km<option>10km<option>15km<option>20km</select> de</td><td> <input type="Radio">Emplacement actuel<br><input type="radio"> CP: <input type="text" style="width:50px"></td></tr></table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="span9"></div>
+			Trier par: <a>Proximité</a> | <a>Prix</a> | <a>Durée</a>
+		</div>
+	<br>
+      <div class="row">
+        <div class="span12" style="border: 1px solid #555555">
+			<div class="span2">
+				<img class="img-circle" data-src="js/holder.js/140x140">
+			</div>
+			<div class="span5">
+				<h3>Chutes monte-à-peine-et-des-dalles</h3>
+				<h5>Nage, picnic</h5>
+				<p>Très bel endroit pour nager ou simplement profiter de la nature, c'est l'endroit idéal pour une sortie entre amis ou une sortie familiale. </p>
+			</div>
+			<div>
+				<p>Tarification: 7.50$/pers</p>
+				<p>Durée: de 0min à toute la journée</p>
+				<p>Distance: 12km </p>
+				<p><a class="btn" href="#">Obtenir les directions&raquo;</a>
+				<p><a class="btn" href="#">Plus de détails</a>
+			</div>
+        </div>
+        
+      </div><!-- /.row -->
+
+
+
+
+      <footer>
+			<p class="pull-right"><a href="#">Haut de page</a></p>
+			<p>&copy; 2013 &middot; <a href="#">Confidentialité</a> &middot; <a href="#">Contact</a></p>
+		</footer>
+
+    </div><!-- /.container -->
+	<script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+
+  </body>
+</html>
