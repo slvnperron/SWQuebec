@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ActivityFinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/datetimepicker.min.css" rel="stylesheet">
+	<link href="css/site.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+	<style>
+		ul.hList { width: 45em; list-style: none;margin: 0; padding:0}
+		ul.hList li { float:left; width: 15em; }
+		ul.hList p { font-size: 80%; margin: 0 0 5px;}
+		body {background:#222222}
+		div.tilebuttons a{ width: 100px;}
+		</style>
+  </head>
+
+  <body>
+
+
+
+   <div class="navbar-wrapper">
+		<div class="container">
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					<a class="brand" href="index.html">ActivityFinder</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Accueil</a></li>
+							<li><a href="list.html">Trouver des activités</a></li>
+							<li><a href="#">Activités de la semaine</a></li>
+						</ul>
+						<form class="form-search pull-right" style="margin:0px;">
+							<div class="input-append" style="padding-top: 10px;">
+								<input type="text" class="span2 search-query" placeholder="Trouver une activité">
+								<button type="submit" class="btn"><i class="icon-search"></i></button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+
+	<br>
+
+    <div class="container marketing">
+
+		<div class="row">
+			<form action="where.html" role="form">
+				<button class="btn btn-large" type="submit">Maintenant</button>
+			</form>
+
+			<form style="border-top: 1px solid #bbbbbb;" role="form" action="where.html">
+				<label>Date :</label>
+				<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+					<input class="span2" size="16" type="text" value="12-02-2012">
+					<span class="add-on"><i class="icon-th"></i></span>
+				</div>
+
+				<br />
+
+				<div class="btn-group btn-group-justified">
+					<button type="button" class="btn btn-default">Avant-midi</button>
+					<button type="button" class="btn btn-default">Après-midi</button>
+					<button type="button" class="btn btn-default">Soirée</button>
+				</div>
+				<br /><br />
+				<button class="btn btn-large btn-default" type="submit">Go!</button>
+			</form>
+		</div>
+
+
+
+
+
+
+      <footer>
+			<p class="pull-right"><a href="#">Haut de page</a></p>
+			<p>&copy; 2013 &middot; <a href="#">Confidentialité</a> &middot; <a href="#">Contact</a></p>
+		</footer>
+
+    </div><!-- /.container -->
+	<script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/datetimepicker.fr-CA.js"></script>
+    <script src="js/datetimepicker.min.js"></script>
+
+  </body>
+</html>
