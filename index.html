@@ -66,16 +66,26 @@
 		<div class="row">
 			<div class="span12 tilebuttons">
 				
-		
-				
-
-				<h3>What's your mood?</h3>
-				<a class="btn btn-large" href="#">Romantique</a>
-				<a class="btn btn-large " href="#">Relaxation</a>
-				<a class="btn btn-large " href="#">Aventure</a>
-				<a class="btn btn-large " href="#">Saisonnière</a>
-				<a class="btn btn-large " href="#">J'ai faim</a>
-				<a class="btn btn-large " href="#">J'ai faim</a>
+				<div id="menucarousel" class="owl-carousel">
+					<div>
+						<h3>What's your mood?</h3>
+						<a class="btn btn-large" href="#">Romantique</a>
+						<a class="btn btn-large " href="#">Relaxation</a>
+						<a class="btn btn-large " href="#">Aventure</a>
+						<a class="btn btn-large " href="#">Saisonnière</a>
+						<a class="btn btn-large " href="#">J'ai faim</a>
+						<a class="btn btn-large " href="#">J'ai faim</a>
+					</div>
+					<div>
+						<h3>What's your mood?</h3>
+						<a class="btn btn-large" href="#">Romantique</a>
+						<a class="btn btn-large " href="#">Relaxation</a>
+						<a class="btn btn-large " href="#">Aventure</a>
+						<a class="btn btn-large " href="#">Saisonnière</a>
+						<a class="btn btn-large " href="#">J'ai faim</a>
+						<a class="btn btn-large " href="#">J'ai faim</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -90,6 +100,10 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/holder.js"></script>
 	<script src="js/owl.carousel.js"></script>
-
+	<script>
+		$(document).ready(function() {
+			$("#menucarousel").owlCarousel();
+		});
+	</script>
   </body>
 </html>
