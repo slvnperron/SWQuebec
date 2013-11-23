@@ -19,12 +19,23 @@
 	
 	<style>
 		ul.hList { width: 45em; list-style: none;margin: 0; padding:0}
+		ul.vList { list-style:none;}
 		ul.hList li { float:left; width: 15em; }
 		ul.hList p { font-size: 80%; margin: 0 0 5px;}
 		body {background:#222222}
 		div.tilebuttons { text-align:center}
 		div.tilebuttons a{ width: 100px; margin-bottom: 10px;}
-		</style>
+	</style>
+		
+	<script>
+		var selectedMood,selectedWhen,selectedWhere;
+		
+		function gotoTab(index)
+		{
+			var owl = $('#menucarousel').data('owlCarousel');
+			owl.goTo(index);
+		}
+	</script>
   </head>
 
   <body>
@@ -67,33 +78,41 @@
 			<div class="span12 tilebuttons">
 				
 				<div id="menucarousel" class="owl-carousel">
-					<div>
+					<div id="moodMenu">
 						<h3>What's your mood?</h3>
 						<a class="btn btn-large" href="#">Romantique</a>
-						<a class="btn btn-large " href="#">Relaxation</a>
-						<a class="btn btn-large " href="#">Aventure</a>
-						<a class="btn btn-large " href="#">Saisonnière</a>
-						<a class="btn btn-large " href="#">J'ai faim</a>
-						<a class="btn btn-large " href="#">J'ai faim</a>
+						<a class="btn btn-large" href="#">Relaxation</a>
+						<a class="btn btn-large" href="#">Aventure</a>
+						<a class="btn btn-large" href="#">Saisonnière</a>
+						<a class="btn btn-large" href="#">J'ai faim</a>
 					</div>
 					<div>
 						<h3>What's your mood?</h3>
 						<a class="btn btn-large" href="#">Romantique</a>
-						<a class="btn btn-large " href="#">Relaxation</a>
-						<a class="btn btn-large " href="#">Aventure</a>
-						<a class="btn btn-large " href="#">Saisonnière</a>
-						<a class="btn btn-large " href="#">J'ai faim</a>
-						<a class="btn btn-large " href="#">J'ai faim</a>
+						<a class="btn btn-large" href="#">Relaxation</a>
+						<a class="btn btn-large" href="#">Aventure</a>
+						<a class="btn btn-large" href="#">Saisonnière</a>
+						<a class="btn btn-large" href="#">J'ai faim</a>
+						<a class="btn btn-large" href="#">J'ai faim</a>
 					</div>
 				</div>
+				
+				
+			</div>
+			<div class="span12">
+				<hr>
+				<ul class="vList">
+					<li><span id="footerMood"></span></li>
+					<li><span id="footerWhen"></span></li>
+					<li><span id="footerWhere"></span></li>
+				</ul>
 			</div>
 		</div>
 		
-		  <footer class="bs-footer">
+		<footer class="bs-footer">
 			<p class="pull-right"><a href="#">Haut de page</a></p>
 			<p>&copy; 2013 &middot; <a href="#">Confidentialité</a> &middot; <a href="#">Contact</a></p>
 		</footer>
-
     </div>
 	
 	<script src="bootstrap/js/jquery.js"></script>
@@ -103,6 +122,12 @@
 	<script>
 		$(document).ready(function() {
 			$("#menucarousel").owlCarousel();
+			
+			$("#moodMenu a").click(function(e) {
+				selectedMood = $(this).html();
+				$('#footerMood').html('<a href="#" onclick="gotoTab(1)">' + selectedMood + '</a>');
+				gotoTab(2);
+			});
 		});
 	</script>
   </body>
