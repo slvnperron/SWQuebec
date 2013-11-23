@@ -121,12 +121,12 @@
 	<script src="js/owl.carousel.js"></script>
 	<script>
 		$(document).ready(function() {
-			$("#menucarousel").owlCarousel();
+			$("#menucarousel").owlCarousel({items: 1});
 			
 			$("#moodMenu a").click(function(e) {
 				selectedMood = $(this).html();
-				$('#footerMood').html('<a href="#" onclick="gotoTab(1)">' + selectedMood + '</a>');
-				gotoTab(2);
+				$('#footerMood').html('<a href="#" onclick="gotoTab(0)">' + selectedMood + '</a>');
+				gotoTab(1);	
 			});
 		});
 	</script>
