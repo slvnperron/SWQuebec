@@ -13,7 +13,7 @@
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
 	<link href="css/site.css" rel="stylesheet">
-	
+
 	<style>
 		ul.hList { width: 45em; list-style: none;margin: 0; padding:0}
 		ul.vList { list-style:none;}
@@ -23,10 +23,10 @@
 		div.tilebuttons { text-align:center}
 		div.tilebuttons button{ width: 100px; margin-bottom: 10px;}
 	</style>
-		
+
 	<script>
 		var selectedMood,selectedWhen,selectedWhere;
-		
+
 		function gotoTab(index)
 		{
 			var owl = $('#menucarousel').data('owlCarousel');
@@ -53,9 +53,11 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Accueil</a></li>
 				<li><a href="list.html">Trouver des activités</a></li>
-				<li><a href="#">Activités de la semaine</a></li> 
-				<li><a href="#">Recherche avancée</a></li> 
-				<li><a href="#">Suggérer une activité</a></li> 
+				<li><a href="#">Activités de la semaine</a></li>
+				<li><a href="#">Recherche avancée</a></li>
+				<li><a href="#">Suggérer une activité</a></li>
+			  	<li><a href="#">Confidentialité</a></li>
+			  	<li><a href="#">Contact</a></li>
           </ul>
 		  <form class="navbar-form" role="search">
 			<div class="input-group">
@@ -75,7 +77,7 @@
     <div class="container marketing">
 		<div class="row">
 			<div class="span12 tilebuttons">
-				
+
 				<div id="menucarousel" class="owl-carousel">
 					<div id="moodMenu">
 						<h3>What's your mood?</h3>
@@ -88,48 +90,70 @@
 					</div>
 					<div id="whenMenu">
 						<h3>Quand?</h3>
-							<button class="btn btn-large" type="submit">Maintenant</button>
-							<br>
-						
+						<button id="nowButton" class="btn btn-large" type="submit">Maintenant</button>
+						<br>
+
+						<div style="border-top: 1px solid #bbbbbb;">
 							<label>Date :</label>
 							 <div class="form-group">
 								<div class='input-group date' id="datetimepicker">
-									<input type='text' class="form-control" />
+									<input id="date" type='text' class="form-control" />
 									<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 								</div>
 							</div>
+						</div>
 
-							<br />
+						<br />
 
-							<div class="btn-group btn-group-justified">
-								<button type="button" class="btn btn-default">Avant-midi</button>
-								<button type="button" class="btn btn-default">Après-midi</button>
-								<button type="button" class="btn btn-default">Soirée</button>
-							</div>
-							<br /><br />
-							<button class="btn btn-large btn-default" type="submit">Go!</button>
-						
+						<div class="btn-group btn-group-justified">
+							<button type="button" class="btn btn-default momentButton">Avant-midi</button>
+							<button type="button" class="btn btn-default momentButton">Après-midi</button>
+							<button type="button" class="btn btn-default momentButton">Soirée</button>
+						</div>
+						<br /><br />
+						<button id="whenGoButton" class="btn btn-large btn-default" type="submit">Go!</button>
 					</div>
+					<div id="whereMenu">
+						<h3>Où?</h3>
+						<button id="hereButton" class="btn btn-large" type="submit">Québec</button>
+
+						<div style="border-top: 1px solid #bbbbbb;">
+							<label for="exampleInputEmail1">Ville ou code postal :</label>
+							<input id="place" type="text" class="form-control" id="inputCity" placeholder="Entrez un lieu">
+							<br />
+							<button id="whereGoButton" class="btn btn-large btn-default" type="submit">Go!</button>
+						</div>
+					</div>
+					<div id="howMuchMenu">
+						<h3>Combien?</h3>
+						<form action="results.html" role="form">
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">Gratuit</button><br>
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">10$ max</button><br>
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">20$ max</button><br>
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">50$ max</button><br>
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">100$ max</button><br>
+							<button style="margin-bottom:1%;" class="btn btn-large howMuchButton" type="submit">I'm rich</button><br>
+						</form>
+					</div>
+
+
 				</div>
-				
-				
-			</div>
-			<div class="span12">
-				<hr>
-				<ul class="vList">
-					<li><span id="footerMood"></span></li>
-					<li><span id="footerWhen"></span></li>
-					<li><span id="footerWhere"></span></li>
-				</ul>
+
+
 			</div>
 		</div>
-		
-		<footer class="footer">
-			<p class="pull-right"><a href="#">Haut de page</a></p>
-			<p>&copy; 2013 &middot; <a href="#">Confidentialité</a> &middot; <a href="#">Contact</a></p>
-		</footer>
     </div>
-	
+
+	<div class="span12 bs-footer">
+		<hr>
+		<ul class="vList">
+			<li><span id="footerMood"> </span></li>
+			<li><span id="footerWhen"> </span></li>
+			<li><span id="footerWhere"> </span></li>
+			<li><span id="footerHowMuch"> </span></li>
+		</ul>
+	</div>
+
 	<script src="bootstrap/js/jquery.js"></script>
 	<script src="js/moment.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
@@ -140,17 +164,49 @@
 	<script>
 		$(document).ready(function() {
 			$("#menucarousel").owlCarousel({items: 1});
-			
+
 			$("#moodMenu button").click(function(e) {
 				selectedMood = $(this).html();
 				$('#footerMood').html('<a href="#" onclick="gotoTab(0)">' + selectedMood + '</a>');
-				gotoTab(1);	
+				gotoTab(1);
 			});
-			
+
+			$("#whenMenu #nowButton").click(function(e) {
+				$('#footerWhen').html('<a href="#" onclick="gotoTab(1)">Maintenant</a>');
+				gotoTab(2);
+			});
+
+			var moment;
+			$("#whenMenu .momentButton").click(function(e) {
+				moment = $(this).html();
+			});
+
+			$("#whenMenu #whenGoButton").click(function(e) {
+				date = $("#whenMenu #date").val();
+				$('#footerWhen').html('<a href="#" onclick="gotoTab(1)">' + date + ' ' + moment + '</a>');
+				gotoTab(2);
+			});
+
 			$('#datetimepicker').datetimepicker({
 				format: 'dddd [le] D MMMM YYYY',
 				language: 'fr-CA',
 				pickTime: false
+			});
+
+			$("#whereMenu #hereButton").click(function(e) {
+				$('#footerWhere').html('<a href="#" onclick="gotoTab(2)">' + $(this).html() + '</a>');
+				gotoTab(3);
+			});
+
+			$("#whereMenu #whereGoButton").click(function(e) {
+				place = $("#whereMenu #place").val();
+				$('#footerWhere').html('<a href="#" onclick="gotoTab(2)">' + place + '</a>');
+				gotoTab(3);
+			});
+
+			$("#howMuchMenu .howMuchButton").click(function(e) {
+				$('#footerHowMuch').html('<a href="#" onclick="gotoTab(3)">' + $(this).html() + '</a>');
+				gotoTab(3);
 			});
 		});
 	</script>
