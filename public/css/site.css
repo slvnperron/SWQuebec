@@ -11,6 +11,16 @@ hr {
 	margin:0px;
 }
 
+.category {
+  width: 100px;
+  height:100px;
+  padding: 1%;
+}
+
+#category-holder {
+  padding: 5%;
+}
+
 body {
     padding-bottom: 40px;
     color: #5a5a5a;
@@ -18,15 +28,6 @@ body {
 	padding-bottom:0px;
 }
 
-    .category {
-      width: 30%;
-      height:30%;
-      padding: 1%;
-    }
-
-    #category-holder {
-      padding: 5%;
-    }
 
 	/*Barre de navigation */
     .navbar-wrapper {
