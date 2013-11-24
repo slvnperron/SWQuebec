@@ -18,6 +18,16 @@ body {
 	padding-bottom:0px;
 }
 
+    .category {
+      width: 30%;
+      height:30%;
+      padding: 1%;
+    }
+
+    #category-holder {
+      padding: 5%;
+    }
+
 	/*Barre de navigation */
     .navbar-wrapper {
       top: 0;
