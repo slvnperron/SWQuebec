@@ -57,22 +57,41 @@ hr {
 }
 
 .marketing {
+	margin-top: 30px;
+}
 
-margin-top: 30px;
+#allResults {
+}
 
+#sponsoredResults {
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+}
+
+#normalResults{
+	height:100px;
+	overflow-x:scroll;
 }
 
 .activity-img {
-	width:30px;
-	height:30px;
+	width:50px;
+	height:50px;
+	display:inline-block;
+}
+
+.activity-data {
+	display:inline-block;
 }
 
 .activity-title {
-
+	font-size:16px;
+	color:#eee;
 }
 
 .activity-price {
-
+	font-size:11px;
+	color:#ccc;
 }
 
 body {
