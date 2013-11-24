@@ -66,12 +66,19 @@ hr {
 #sponsoredResults {
 	margin-left:10px;
 	margin-right:10px;
-	margin-top:10px;
 }
 
 #normalResults{
+	margin-left:10px;
+	margin-right:10px;
 	height:100px;
-	overflow-x:scroll;
+	overflow-y:scroll;
+}
+
+.result {
+	width:200px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 .activity-img {
@@ -87,11 +94,13 @@ hr {
 .activity-title {
 	font-size:16px;
 	color:#eee;
+	margin-bottom:2px;
 }
 
 .activity-price {
 	font-size:11px;
 	color:#ccc;
+	margin-bottom:2px;
 }
 
 body {
