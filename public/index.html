@@ -81,13 +81,13 @@
 					<div id="moodMenu">
 						<h3>What's your mood?</h3>
 						<div id="category-holder">
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="romance"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="sport"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="party"></image>
 							<br/>
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
-							<image class="category img-circle" src="images/romance_icon.jpg" class="img-circle"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="relax"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="chocolat"></image>
+							<image class="category img-circle" src="images/romance_icon.jpg" val="poutine"></image>
 						</div>
 
 					</div>
@@ -168,8 +168,8 @@
 		$(document).ready(function() {
 			$("#menucarousel").owlCarousel({items: 1});
 
-			$("#moodMenu button").click(function(e) {
-				selectedMood = $(this).html();
+			$("#moodMenu img").click(function(e) {
+				selectedMood = $(this).attr("val");
 				$('#footerMood').html('<a href="#" onclick="gotoTab(0)">' + selectedMood + '</a>');
 				gotoTab(1);
 			});
